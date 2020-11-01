@@ -16,12 +16,14 @@ const e = React.createElement
 const Menu = () => {
 const arr = arrNavElement.map((item)=>{
     return  e("div", {style: {width: "30%", display:"flex", flexDirection:"column", alignItems:"center", marginBottom:"20px"}}, 
-                e("a",{href: "#"}, e("img", {src: item.img, style: {flexGrow: "1", height: "50px"}})),
+                e("a",{href: "#"}, 
+                    e("img", {src: item.img, style: {flexGrow: "1", height: "50px"}})
+                ),
                 e("a", {href: "#", style: {textDecoration: "none"}}, item.name)
-    )
+            )
 })
     return(
-        e("div", {style:{display: "flex", flexWrap: "wrap", justifyContent:"space-between", boxShadow:"0 0 5px 0", width: "300px", padding:"20px", position:"absolute", top:"100%", right:"0", left:"70%"}}, arr)
+        e("div", {style:{display: "flex", flexWrap: "wrap", justifyContent:"space-between", boxShadow:"0 0 5px 0", width: "300px", padding:"20px", position:"absolute", top:"100%", right:"0", left:"73%"}}, arr)
     )                 
 }
 export default Menu
